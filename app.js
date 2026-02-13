@@ -16,7 +16,7 @@ var Calculadora = /** @class */ (function () {
     };
     Calculadora.prototype.dividir = function (a, b) {
         if (b === 0) {
-            throw new Error("No se puede dividir entre cero");
+            throw new Error("No es posible dividir entre cero");
         }
         this.resultado = a / b;
         return this.resultado;
@@ -28,13 +28,11 @@ var Calculadora = /** @class */ (function () {
 }());
 var calc = new Calculadora();
 var resultadoElemento = document.getElementById("resultado");
-// Función reutilizable para obtener números
 function obtenerNumeros() {
     var num1 = Number(document.getElementById("num1").value);
     var num2 = Number(document.getElementById("num2").value);
     return [num1, num2];
 }
-// Eventos
 document.getElementById("btnSumar")
     .addEventListener("click", function () {
     var _a = obtenerNumeros(), a = _a[0], b = _a[1];
@@ -57,6 +55,6 @@ document.getElementById("btnDividir")
         resultadoElemento.innerText = "Resultado: " + calc.dividir(a, b);
     }
     catch (error) {
-        resultadoElemento.innerText = "Error: No se puede dividir entre 0";
+        resultadoElemento.innerText = "Error: No es posible dividir entre cero";
     }
 });

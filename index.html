@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora POO</title>
+    <title>Calculadora TypeScript</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <h2>Calculadora</h2>
+    <div class="container">
+        <h2>Calculadora</h2>
 
-    <input type="number" id="num1" placeholder="Número 1">
-    <input type="number" id="num2" placeholder="Número 2">
+        <div class="inputs">
+            <input type="number" id="num1" placeholder="Número 1">
+            <input type="number" id="num2" placeholder="Número 2">
+        </div>
 
-    <br><br>
+        <div class="buttons">
+            <button id="btnSumar">+</button>
+            <button id="btnRestar">-</button>
+            <button id="btnMultiplicar">*</button>
+            <button id="btnDividir">/</button>
+        </div>
 
-    <button id="btnSumar">Sumar</button>
-    <button id="btnRestar">Restar</button>
-    <button id="btnMultiplicar">Multiplicar</button>
-    <button id="btnDividir">Dividir</button>
-
-    <h3 id="resultado"></h3>
+        <h3 id="resultado">Resultado: </h3>
+    </div>
 
     <script src="app.js"></script>
 </body>

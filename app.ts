@@ -19,7 +19,7 @@ class Calculadora {
 
     dividir(a: number, b: number): number {
         if (b === 0) {
-            throw new Error("No se puede dividir entre cero");
+            throw new Error("No es posible dividir entre cero");
         }
         this.resultado = a / b;
         return this.resultado;
@@ -34,14 +34,14 @@ const calc = new Calculadora();
 
 const resultadoElemento = document.getElementById("resultado") as HTMLElement;
 
-// Función reutilizable para obtener números
+
 function obtenerNumeros(): [number, number] {
     const num1 = Number((document.getElementById("num1") as HTMLInputElement).value);
     const num2 = Number((document.getElementById("num2") as HTMLInputElement).value);
     return [num1, num2];
 }
 
-// Eventos
+
 
 (document.getElementById("btnSumar") as HTMLButtonElement)
 .addEventListener("click", () => {
@@ -67,6 +67,6 @@ function obtenerNumeros(): [number, number] {
     try {
         resultadoElemento.innerText = "Resultado: " + calc.dividir(a, b);
     } catch (error) {
-        resultadoElemento.innerText = "Error: No se puede dividir entre 0";
+        resultadoElemento.innerText = "Error: No es posible dividir entre cero";
     }
 });
